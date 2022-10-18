@@ -1,0 +1,517 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #ddd;
+}
+
+.food-img {
+  position: relative;
+}
+
+.food-img img {
+  width: 150px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: -10px 10px 10px #424242;
+  position: relative;
+  margin-right: 20px;
+}
+
+.food-img::before {
+  content: "";
+  width: 150px;
+  height: 120px;
+  border: 3px solid #000;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+}
+
+.food-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  justify-content: space-between;
+}
+.food-card {
+  width: 33%;
+  padding: 30px 0px;
+  padding-right: 80px;
+}
+.card-wrap {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.food-description h2 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.food-description p {
+  font-size: 14px;
+}
+
+.meal {
+  text-align: center;
+  position: relative;
+  margin: 40px 0;
+}
+
+.meal h2 {
+  color: #000;
+}
+
+.meal::before {
+  content: "";
+  width: 40%;
+  height: 2px;
+  border: none;
+  background-color: #000;
+  position: absolute;
+  top: calc(100% / 2);
+  left: 0;
+}
+
+.meal::after {
+  content: "";
+  width: 40%;
+  height: 2px;
+  border: none;
+  background-color: #000;
+  position: absolute;
+  top: calc(100% / 2);
+  right: 0;
+}
+
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+  padding: 0 100px;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tabs-container button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  border-radius: 30px;
+}
+
+/* Change background color of buttons on hover */
+.tabs-container button:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 30px;
+}
+
+/* Create an active/current tablink class */
+.tabs-container button.active {
+  background-color: #000;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.hero {
+  background-image: url("hero.jpg");
+  padding: 80px 20px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.hero::before {
+  content: "";
+  background-color: #000;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 52px;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.tabs-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+.tabs-container button {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.custom-select {
+  margin: 0 auto;
+  width: 40%;
+}
+
+#dropDown {
+  background-color: #ff5733;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A@{arrow}%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius: 2px;
+  border: none;
+  color: #ffffff;
+  padding: 10px 30px 10px 10px;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+#food-calculate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#food-calculate > .hero p { 
+  color: #fff;
+  padding: 0 200px;
+  text-align: center;
+  z-index: 2;
+
+}
+
+.breakfast-item h2{
+  text-align: center;
+  background-color: #ff5733;
+  padding: 20px 40px;
+  color: #fff;
+  width: 40%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  box-shadow: -10px 10px 10px #ff5733;
+}
+
+.must-eat-calories{
+ padding-left: 100px;
+  font-weight: bold;
+  
+}
+
+
+.calculator-flex{
+  display: flex;
+  padding-left: 60px;
+  justify-content: center;
+  
+}
+.calculator{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+ 
+}
+
+ .calculator-flex input[type="text"]{
+  text-align: center;
+  background-color: #ff5733;
+  padding: 15px 20px;
+  color: #000;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+border-radius: 10px;
+width: 200px;
+} 
+
+.input-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.calculator-flex button{
+  text-align: center;
+  background-color: transparent;
+  padding: 5px 20px;
+  color: #000;
+  outline: none;
+  border: 2px solid #000;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+  margin: 20px 0;
+} 
+
+.big-text{
+  height: 30px;
+  font-size: 22px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.list-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 60px;
+}
+
+.calculator-flex button:hover{
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+} 
+
+.calculator-flex h2::before {
+  content: "";
+  width: 25%;
+  height: 85px;
+  border: none;
+  background-color: #000;
+  position: absolute;
+  border-radius: 100%;
+  top: calc((100% - 85px) / 2);
+  left: calc(-100% / 2);
+  box-shadow: -15px 0px 10px #000;
+}
+
+.calculator-flex h2::after {
+  content: "";
+  width: 25%;
+  height: 85px;
+  border: none;
+  background-color: #000;
+  border-radius: 100%;
+  position: absolute;
+  top: calc((100% - 85px) / 2);
+  right: calc(-100% / 2);
+  box-shadow: 15px 0px 10px #000;
+}
+
+
+.list-flex ol{
+  list-style: none;
+}
+
+.list-flex input[type="checkbox"]{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  /* height: 0; */
+  /* width: 0; */
+  top: 0px;
+  left: 0;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ff5733;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.bf-li{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.bf-li:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.bf-li input:checked ~ .checkmark {
+  background-color: #ff5733;
+}
+
+
+
+.bf-li input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.bf-li .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.lunch-li{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.lunch-li:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.lunch-li input:checked ~ .checkmark {
+  background-color: #ff5733;
+}
+
+
+
+.lunch-li input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.lunch-li .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.dinner-li{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dinner-li:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.dinner-li input:checked ~ .checkmark {
+  background-color: #ff5733;
+}
+
+
+
+.dinner-li input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.dinner-li .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.hidden{
+  display: none;
+  margin-left: 40px;
+}
+
+@-moz-document url-prefix() {
+  select {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0 0 0 #ffffff;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .food-card {
+    width: 50%;
+  }
+}

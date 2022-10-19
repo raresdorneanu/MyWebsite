@@ -47,7 +47,7 @@ var windowHeight;
 
 function init() {
     elements = document.querySelectorAll(".noanimfornow");
-    windowHeight = window.innerHeight/1.2;
+    windowHeight = window.innerHeight / 1.2;
 }
 
 function checkPosition() {
@@ -76,48 +76,78 @@ checkPosition();
 
 const heroPicture = document.querySelector('#hero-picture')
 setTimeout(() => {
-    heroPicture.style.display = 'block';
+    heroPicture.style.visibility = 'visible';
 
-  // 👇️ if you used `display` to hide element
-  // el.style.display = 'block';
+    // 👇️ if you used `display` to hide element
+    // el.style.display = 'block';
 }, 500);
 
 const icon1 = document.querySelector('#linkedIn')
 setTimeout(() => {
-    icon1.style.display = 'block';
+    icon1.style.visibility = 'visible';
 
-  // 👇️ if you used `display` to hide element
-  // el.style.display = 'block';
+    // 👇️ if you used `display` to hide element
+    // el.style.display = 'block';
 }, 1000);
 
 const icon2 = document.querySelector('#gitHub')
 setTimeout(() => {
-    icon2.style.display = 'block';
+    icon2.style.visibility = 'visible';
 
-  // 👇️ if you used `display` to hide element
-  // el.style.display = 'block';
+    // 👇️ if you used `display` to hide element
+    // el.style.display = 'block';
 }, 1500);
 
-const projects = document.querySelector('.projects-container')
-setTimeout(() => {
-    projects.style.display = 'block';
 
-  // 👇️ if you used `display` to hide element
-  // el.style.display = 'block';
-}, 2000);
 
 const years = document.querySelector('.about-me-container')
 setTimeout(() => {
     years.style.visibility = 'visible';
 
-  // 👇️ if you used `display` to hide element
-  // el.style.display = 'block';
+    // 👇️ if you used `display` to hide element
+    // el.style.display = 'block';
 }, 3000);
 
 const footer = document.querySelector('.footer')
 setTimeout(() => {
-    footer.style.display = 'block';
+    footer.style.visibility = 'visible';
 
-  // 👇️ if you used `display` to hide element
-  // el.style.display = 'block';
+    // 👇️ if you used `display` to hide element
+    // el.style.display = 'block';
 }, 4000);
+
+$(document).ready(function () {
+    $('#hero-picture').mouseover(function () {
+        $('.hidden-pic').css('display', 'flex');
+        $('.hidden-pic').animate({ width: '300px' }, '400');
+    });
+    $('#hero-picture').mouseout(function () {
+        $('.hidden-pic').css('display', 'none');
+        $('.hidden-pic').animate({ width: '0px' }, 0);
+    });
+
+    
+
+});
+
+$("#scrollAbout").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".about-me-container").offset().top
+    }, 500);
+});
+
+$("#scrollContact").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".footer").offset().top
+    }, 500);
+});
+
+$("#scrollTop").click(function() {
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(".fixed-bar").offset().top
+    }, 500);
+});
+
+
+
+

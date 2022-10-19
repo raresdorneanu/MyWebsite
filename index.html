@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Rares Dorneanu Website</title>
+    <link rel="stylesheet" href="style2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,10 +20,33 @@
     />
   </head>
   <body>
+    <div class="fixed-bar">
+        
+
+        <div class="bar-content">
+            <div class="hero-picture">
+                <img
+                  src="rares.jpg"
+                  alt="Rares Image"
+                  id="hero-picture"
+                  class="noanimfornow"
+                />
+              </div>
+            
+        </div>
+    </div>
     <section class="hero-container">
       <div class="over"></div>
+      
       <div class="hero">
-        <div class="hero-content noanimfornow">
+        <div class="hero-content">
+            <div class="nav noanimfornow">
+                <ul id="navBar">
+                    <li><button id="scrollTop">Top</button></li>
+                    <li><button id="scrollAbout">About</button></li>
+                    <li><button id="scrollContact">Contact</button></li>
+                </ul>
+            </div>
           <h1 class="title">Dorneanu Rareș</h1>
           <p>Front-End Developer</p>
         </div>
@@ -56,31 +79,27 @@
             </svg>
           </a>
         </div>
-        <div class="hero-picture">
-          <img
-            src="rares.jpg"
-            alt="Rares Image"
-            id="hero-picture"
-            class="noanimfornow"
-          />
-        </div>
+        
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
-        <path
-          fill="#dddddd"
-          fill-opacity="1"
-          d="M0,224L48,213.3C96,203,192,181,288,170.7C384,160,480,160,576,181.3C672,203,768,245,864,256C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
+      
     </section>
 
-    <section class="projects-container noanimfornow">
-      <h2 class="proj_title">Projects</h2>
-      <div class="tabs">
+    <section class="projects-container">
+        <div class="hero-picture hidden-pic">
+            <div class="arrow-up"></div>
+            <img
+              src="rares.jpg"
+              alt="Rares Image"
+              id="hero-picture-hidden"
+              class="noanimfornow"
+            />
+          </div>
+      <h2 class="proj_title noanimfornow">Projects</h2>
+      <div class="tabs noanimfornow">
         <ul>
           <li>
             <button
-              class="hover-underline-animation tablinks"
+              class="hover-underline-animation tablinks noanimfornow"
               id="defaultOpen"
               onclick="openProject(event, 'grocery-project')"
             >
@@ -89,7 +108,7 @@
           </li>
           <li>
             <button
-              class="hover-underline-animation tablinks"
+              class="hover-underline-animation tablinks noanimfornow"
               onclick="openProject(event, 'calculator-project')"
             >
               Calculator
@@ -97,7 +116,7 @@
           </li>
           <li>
             <button
-              class="hover-underline-animation tablinks"
+              class="hover-underline-animation tablinks noanimfornow"
               onclick="openProject(event, 'food-project')"
             >
               Calories Calculator
@@ -106,7 +125,7 @@
         </ul>
       </div>
 
-      <div class="projects">
+      <div class="projects noanimfornow">
         <div id="grocery-project" class="tabcontent">
           <div class="project-picture">
             <img src="grocery.png" alt="Grocery Project" />
@@ -228,8 +247,7 @@
               <span>University "POLITEHNICA" from Bucharest</span>
             </div>
             <div class="learning-description">
-              Faculty of engineering in foreign languages helped me improve my
-              english skills and
+             At the Faculty of Engineering in Foreign Languages I started to create real things with HTML/CSS/JavaScript and helped me improve my english skills 
             </div>
           </div>
           <div class="gradient-border"></div>
@@ -251,44 +269,29 @@
     </section>
 
     <section class="footer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 319">
-        <path
-          fill="#dddddd"
-          fill-opacity="1"
-          d="M0,224L48,213.3C96,203,192,181,288,170.7C384,160,480,160,576,181.3C672,203,768,245,864,256C960,267,1056,245,1152,224C1248,203,1344,181,1392,170.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-        ></path>
-      </svg>
-      <div class="footer-flex">
-        <div class="contact">
-          <h3>Contact me!</h3>
-          <p>
-            Please fill out the form if you have a question or just want to say
-            hi, I'll be happy to answer and provide more information about
-            myself. :)
-          </p>
-        </div>
-        <form
-          action="mailto:you@yourdmainhere.com"
-          method="post"
-          enctype="text/plain"
-          class="noanimfornow"
-        >
-          <div>
-            <label for="">FirstName:</label>
-            <input type="text" name="FirstName" />
+        <div class="over-footer"></div>
+      <div class="footer-flex-wrap">
+        <div class="footer-flex noanimfornow">
+            <div class="contact">
+              <h3>Contact <span>me!</span></h3>
+              <p>
+                If you have a question or just want to say
+                hi, I'll be happy to answer and provide more information about
+                myself. :)
+              </p>
+            </div>
+    
+            <div class="contact-info">
+                <span class="name">Dorneanu Rareș</span>
+                <span class="developer">Front-End Developer</span>
+                <span class="city">Bucharest, Romania</span>
+                <a href="mailto:rares.dorneanu.rd@gmail.com" class="mail">rares.dorneanu.rd@gmail.com</a>
+            </div>
           </div>
-          <div>
-            <label for="">Email:</label> <input type="text" name="Email" />
-          </div>
-          <input type="submit" name="submit" value="Submit" />
-        </form>
-      </div>
-
-      <div class="credits">
-        <p>Made by Dorneanu Rares</p>
-        <p>&copy; Dorneanu Rares</p>
       </div>
     </section>
-    <script src="script.js"></script>
+   
   </body>
+  <script src="jquery/jquery.js"></script>
+  <script src="script2.js"></script>
 </html>

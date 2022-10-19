@@ -178,7 +178,11 @@ svg {
   justify-content: space-evenly;
 }
 
-.project-picture img {
+.project-picture-grocery {
+  background-image: url('grocery.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 300px;
   height: 350px;
   box-shadow: -15px 20px 20px 0px #aaa;
@@ -188,17 +192,40 @@ svg {
   border-radius: 10px;
 }
 
-.project-picture {
-  width: 50%;
-  text-align: center;
+.project-picture-calculator {
+  background-image: url('calculator.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 350px;
+  box-shadow: -15px 20px 20px 0px #aaa;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(-5deg);
+  border-radius: 10px;
+}
+
+.project-picture-food {
+  background-image: url('food.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 350px;
+  box-shadow: -15px 20px 20px 0px #aaa;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(-5deg);
+  border-radius: 10px;
 }
 
 .project-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 50%;
-  padding-right: 100px;
 }
 
 .technologies{
@@ -219,6 +246,9 @@ svg {
 }
 
 .project-description {
+
+  text-align: center;
+  padding: 0 50px;
   padding-bottom: 50px;
 }
 
@@ -266,6 +296,7 @@ svg {
   border: 1px solid #ccc;
   border-top: none;
   animation: fadeEffect 1s;
+  justify-content: center;
 }
 
 .footer {
@@ -497,12 +528,18 @@ form div {
 }
 
 .project-link a{
-  color: #424242;
+  color: #fff;
   transition: all 0.3s ease-in-out;
+  border: 1px solid #424242;
+  background-color: #424242;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .project-link a:hover{
-  color: #000;
+  color: #424242;
+  background-color: transparent;
 }
 .fixed-bar{
   position: absolute;
@@ -519,9 +556,8 @@ form div {
 .nav{
   height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: 50px;
+  top: calc((100% - 250px)/2);
+  right: 0;
   position: fixed;
 }
 .nav ul{
@@ -534,9 +570,9 @@ form div {
 
 .nav ul li{
   margin-bottom: 20px;
-  transform: rotate(90deg);
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
+  transform: rotate(-90deg);
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   margin-top: 40px;
   text-align: center;
   margin-left: -15px;

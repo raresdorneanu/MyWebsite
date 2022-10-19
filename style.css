@@ -25,29 +25,32 @@ a {
 }
 .hero-container {
   position: relative;
-  background-color: #ff5733;
+  padding: 50px 20px;
+  padding-bottom: 100px;
 }
 svg {
   display: block;
 }
 .hero {
   width: 100%;
-  padding: 50px 50px 0 50px;
+  padding: 0px 50px 0 50px;
   display: flex;
-  justify-content: space-between;
-  position: absolute;
+  justify-content: center;
+  position: relative;
   z-index: 1;
   top: 0;
 }
 
 .about-me-container{
   visibility: hidden;
+  padding-bottom: 50px;
 }
 
 .hero-content {
   text-align: center;
   width: 60%;
-  color: #ccc;
+  color: #fff;
+  padding-top: 20px;
 }
 
 .hero-content h1 {
@@ -63,30 +66,66 @@ svg {
 }
 
 .hero-picture img {
-  width: 200px;
-  height: 200px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
+  border: 2px solid black;
   
 }
 
 #hero-picture{
-  display: none;
+  visibility: hidden;
 }
 
 .hero-picture {
   width: 30%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-end;
   
 }
 
 #gitHub{
-  display: none;
+  visibility: hidden;
 }
 
 #linkedIn{
-  display: none;
+  visibility: hidden;
+}
+
+
+
+.over {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.over-footer {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .icons svg {
@@ -106,35 +145,15 @@ svg {
  
 }
 
-.over {
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0)
-  );
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-.icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
 .projects-container{
-  display: none;
+  position: relative;
 }
 
 .projects-container h2 {
   font-size: 56px;
   text-align: center;
   margin-bottom: 40px;
-  color: #ff5733;
+  color: #424242;
   font-family: "Dancing Script", cursive;
 }
 
@@ -188,7 +207,7 @@ svg {
 
 .technologies ul li::before {
   content: "\2022";
-  color: red;
+  color: #424242;
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -209,13 +228,13 @@ svg {
 
 .projects h3 {
   margin-bottom: 10px;
-  color: #ff5733;
+  color: #424242;
 }
 
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #ff5733;
+  color: #424242;
 }
 .hover-underline-animation:after {
   content: "";
@@ -225,7 +244,7 @@ svg {
   height: 1px;
   bottom: -2px;
   left: 0;
-  background-color: #ff5733;
+  background-color: #424242;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -250,9 +269,28 @@ svg {
 }
 
 .footer {
-  background-color: #ff5733;
-  padding-bottom: 100px 0;
-  display: none;
+  padding-top: 100px;
+  visibility: hidden;
+  position: relative;
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.contact-info span{
+  margin-top: 20px;
+}
+.contact-info a{
+  margin-top: 20px;
+}
+
+.contact{
+  margin-right: 40px;
+  width: 40%;
 }
 
 .footer form {
@@ -295,7 +333,7 @@ svg {
 .footer form input[type="submit"]:hover {
   border: 1px solid #fff;
   background-color: white;
-  color: #ff5733;
+  color: #424242;
   transition: all 0.3s ease-in-out;
 }
 
@@ -322,6 +360,23 @@ svg {
 
 .footer-flex {
   display: flex;
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.contact h3 span{
+  font-family: "Dancing Script", cursive;
+  font-size: 48px;
+  color: #000;
+}
+
+.footer-flex-wrap{
+  width: 100%;
+  height: 200px;
 }
 
 .contact h3 {
@@ -336,18 +391,15 @@ form div {
   width: 100%;
 }
 
-.contact {
-  width: 40%;
-  padding-left: 40px;
-}
 
 .contact p {
   color: white;
+
 }
 
 .counter-container {
   display: flex;
-  color: #ff5733;
+  color: #424242;
   font-family: "Dancing Script", cursive;
   flex-direction: column;
   justify-content: center;
@@ -368,7 +420,7 @@ form div {
 }
 
 .years {
-  color: #ff5733;
+  color: #424242;
   font-size: 48px !important;
   font-family: "Dancing Script", cursive;
   text-align: center;
@@ -390,7 +442,7 @@ form div {
 .learning-container h2 {
   padding-left: 100px;
   margin-bottom: 50px;
-  color: #ff5733;
+  color: #424242;
 }
 
 .learning-description {
@@ -415,16 +467,16 @@ form div {
   margin: 10px auto;
   background: linear-gradient(
     269deg,
-    #ff5733,
+    #424242,
     #404040,
     #ffffff,
-    #ff5733,
+    #424242,
     #404040,
     #ffffff,
-    #ff5733,
+    #424242,
     #404040,
     #ffffff,
-    #ff5733
+    #424242
   );
   background-size: 2000% 2000%;
 
@@ -445,12 +497,57 @@ form div {
 }
 
 .project-link a{
-  color: #ff5733;
+  color: #424242;
   transition: all 0.3s ease-in-out;
 }
 
 .project-link a:hover{
   color: #000;
+}
+.fixed-bar{
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.bar-content{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 50px;
+}
+
+.nav{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  position: fixed;
+}
+.nav ul{
+  display: flex;
+  justify-content: center;
+  color: #000;
+  font-size: 18px;
+  flex-direction: column;
+}
+
+.nav ul li{
+  margin-bottom: 20px;
+  transform: rotate(90deg);
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  margin-top: 40px;
+  text-align: center;
+  margin-left: -15px;
+  cursor: pointer;
+
+}
+
+.nav ul li button{
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  width: 100%;
 }
 
 @keyframes myanim {
@@ -508,6 +605,39 @@ form div {
   }
 }
 
+.hidden-pic{
+  display: none;
+  position: absolute;
+  top: -220px;
+  right: 50px;
+  background-color: #fff;
+  width: 0;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.hidden-pic img{
+  width: 200px;
+  height: 200px;
+  z-index: 10; 
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  position: absolute;
+  top: -12px;
+  right: 10px;
+}
+
+
+
+
 /* .learning-row::before{
   content: "";
   border: 1px solid red;
@@ -530,22 +660,5 @@ form div {
   }
   to {
     opacity: 1;
-  }
-}
-@media screen and (max-width: 1850px) {
-  .hero-container {
-    padding-top: 50px;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .hero-container {
-    padding-top: 70px;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .hero-container {
-    padding-top: 100px;
   }
 }
